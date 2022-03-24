@@ -4,6 +4,8 @@
  */
 package imad.tarea_6b_hospital_imadelfahssi;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author imad
@@ -12,7 +14,7 @@ public class Nif {
 
     private String numeroDNI;
     private char letraDNI;
-
+    private LocalDate fechaCaducidad;
     public Nif(String numeroDNI) {
         if (numeroDNI.length() > 8 || numeroDNI.length() < 8) {
             numeroDNI = "12345678";
