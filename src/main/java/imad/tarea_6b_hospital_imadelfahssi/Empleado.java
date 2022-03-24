@@ -9,5 +9,8 @@ package imad.tarea_6b_hospital_imadelfahssi;
  * @author imad
  */
 public abstract class Empleado extends Persona{
+    protected String numeroSeguridadSocial;
+    protected double salario;
+    public abstract double calcularIRPF();
     
 }

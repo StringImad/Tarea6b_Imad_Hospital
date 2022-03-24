@@ -4,10 +4,20 @@
  */
 package imad.tarea_6b_hospital_imadelfahssi;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author imad
  */
 public abstract class Persona {
+    protected String nombre;
+    protected String apellido;
+    protected Nif nifPersona;
+    
+    public void renovarNif(LocalDate fechaSolicitud){
+        this.nifPersona.renovarDni(fechaSolicitud);
+    }
+    
     
 }

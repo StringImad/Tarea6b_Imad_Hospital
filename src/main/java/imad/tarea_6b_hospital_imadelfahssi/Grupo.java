@@ -9,5 +9,6 @@ package imad.tarea_6b_hospital_imadelfahssi;
  * @author imad
  */
 public enum Grupo {
+    C, D, E;
     
 }
