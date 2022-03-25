@@ -12,21 +12,29 @@ public class Administrativo extends Empleado {
 
     private Grupo grupo;
 
-    public void registrarDocumento(String nombreDoc) {
+    public Administrativo() {
+        super();
+        this.grupo = Grupo.C;
+    }
 
+    public Administrativo(Grupo grupo, String numeroSeguridadSocial, double salario, String nombre, String apellido, Nif nifPersona) {
+        super(numeroSeguridadSocial, salario, nombre, apellido, nifPersona);
+        this.grupo = grupo;
+    }
+
+    public void registrarDocumento(String nombreDoc) {
+        System.out.println("El admin: " + this.nombre + " con apellido: " + this.apellido + " ha registrado el documento: " + nombreDoc + " con el hash" + nombreDoc.hashCode());
     }
 
     @Override
     public double calcularIRPF() {
-        switch(grupo.name()){
-            case "C":
-                return this.salario*(0.175);
-            case "D":
-                return this.salario*(0.18);
-            case "E":
-                return this.salario*(0.185);
-        }
-        return 0;
-        }
+
+        return this.salario * grupo.getIRPF();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Administrativo{" + "grupo=" + grupo + '}';
+    }
 
 }
