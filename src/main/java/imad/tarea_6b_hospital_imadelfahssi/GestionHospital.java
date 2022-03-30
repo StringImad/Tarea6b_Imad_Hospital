@@ -46,24 +46,21 @@ public class GestionHospital {
                 contadorDocumento++;
                 ((Administrativo) t).registrarDocumento("Documento" + contadorDocumento);
             }
-
+            System.out.println("SALARIO: "+t.calcularIRPF());
         }
         //System.out.println(nuevo.toString());
     }
 
     public static Paciente crearPaciente() {
 
-        Paciente nuevo = new Paciente();
-        return nuevo;
+        return new  Paciente();
     }
 
     public static Medico crearMedico() {
-        Medico nuevo = new Medico();
-        return nuevo;
+       return new Medico();
     }
 
     public static Administrativo crearAdministrativo() {
-        Administrativo nuevo = new Administrativo();
-        return nuevo;
+        return new Administrativo();
     }
 }

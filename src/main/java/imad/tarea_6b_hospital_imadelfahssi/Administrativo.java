@@ -14,7 +14,7 @@ public class Administrativo extends Empleado {
 
     public Administrativo() {
         super();
-        this.grupo = Grupo.C;
+        this.grupo = Grupo.enumAleatorio();
     }
 
     public Administrativo(Grupo grupo, String numeroSeguridadSocial, double salario, String nombre, String apellido, Nif nifPersona) {
